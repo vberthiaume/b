@@ -1,16 +1,18 @@
 #include "B.hpp"
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 B::B()
 {
-    std::cout << "constructed a B\n";
-    i = 3;
-
+    std::srand(std::time(nullptr)); // use current time as seed for random generator
     doStuff();
+    std::cout << "constructed a B\n";
 }
 
-void B::doStuff()
+int B::doStuff()
 {
-    std::cout << "B did some stuff with i == " << i << "\n";
-    i = 3;
+    i = std::rand();
+    std::cout << "B::i is now == " << i << "\n";
+    return i;
 }
