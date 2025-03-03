@@ -2,7 +2,7 @@ class B
 {
 public:
     B();
-    void doStuff();
+    int doStuff();
 private:
     int i{};
 };
